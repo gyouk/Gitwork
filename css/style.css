@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .body {
     font-family: Montserrat, serif;
-}
+    }
 .container {
     padding: 0;
 }
@@ -11,7 +11,8 @@
     background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
     display: block;
     position: relative;
-    width: 100%; }
+    width: 100%;
+    }
 .header::before {
     content: "";
     background: url(../img/Layer_15.png) no-repeat center top/cover;
@@ -21,7 +22,9 @@
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: +5; }
+    z-index: +5;
+    }
+
 /*задний фон*/
 li{
     display: inline-block;
@@ -45,7 +48,7 @@ li{
     text-align: center; }
 
 .title_creative {
-    font-family: Kaushan script;
+    font-family: 'Kaushan Script',cursive;
     font-size: 60px;
     color: white; }
 
@@ -82,7 +85,7 @@ li{
 }
 .title_up{
     padding-top: 90px;
-    font-family: Kaushan script;
+    font-family: 'Kaushan Script',cursive;
     font-size: 20px;
     color: #333;
     text-align: center
@@ -111,7 +114,7 @@ li{
     width: 900px;
     margin: 0 auto;
 }
-.row_img{
+.row-img{
     display: flex;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -173,31 +176,10 @@ h5 {
     text-transform: uppercase;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.statistic{
+.statistics{
     background-color: #95e1d3;
-
+    display: flex;
+    justify-content: space-around;
 }
 .stat{
     justify-content: space-between;
@@ -209,3 +191,69 @@ h5 {
     border-right: 1px solid #fff;
     height: 100%;
 }
+.stat:first-child {
+    border-left: 1px solid #fff; }
+
+.stat h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+}
+.stat h4 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+}
+.info{
+    width: 100%;
+    }
+.services_block{
+    max-width: 33.333333%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+    margin-bottom: 52px;
+    border-bottom: 1px solid #eee;
+}
+
+.egypt{
+    display: flex;
+}
+.intro_team{
+    display: flex;
+    justify-content: space-between;
+}
+.partn_row{
+    display: flex;
+    justify-content: center;
+}
+.design{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.design:after{
+    content: "";
+    background: url(../img/Layer_45.png);
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.design_img_one {
+    padding-top: 5px;
+    margin: 0 auto;
+    justify-content: center;
+    width: 470px;
+}
+
+.design_img_two {
+    position: absolute;
+    bottom: -90px;
+    display: flex;
+    left: 59%;
+}
+
