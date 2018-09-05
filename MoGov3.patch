@@ -1,0 +1,512 @@
+Index: css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- css/style.css	(revision 9f099d2bb6fe7a903002121f94b8d809af396a3a)
++++ css/style.css	(date 1536068324606)
+@@ -1,7 +1,7 @@
+ @charset "UTF-8";
+ .body {
+     font-family: Montserrat, serif;
+-}
++    }
+ .container {
+     padding: 0;
+ }
+@@ -11,7 +11,8 @@
+     background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+     display: block;
+     position: relative;
+-    width: 100%; }
++    width: 100%;
++    }
+ .header::before {
+     content: "";
+     background: url(../img/Layer_15.png) no-repeat center top/cover;
+@@ -21,7 +22,9 @@
+     bottom: 0;
+     right: 0;
+     position: absolute;
+-    z-index: +5; }
++    z-index: +5;
++    }
++
+ /*задний фон*/
+ li{
+     display: inline-block;
+@@ -45,7 +48,7 @@
+     text-align: center; }
+ 
+ .title_creative {
+-    font-family: Kaushan script;
++    font-family: 'Kaushan Script',cursive;
+     font-size: 60px;
+     color: white; }
+ 
+@@ -82,7 +85,7 @@
+ }
+ .title_up{
+     padding-top: 90px;
+-    font-family: Kaushan script;
++    font-family: 'Kaushan Script',cursive;
+     font-size: 20px;
+     color: #333;
+     text-align: center
+@@ -111,7 +114,7 @@
+     width: 900px;
+     margin: 0 auto;
+ }
+-.row_img{
++.row-img{
+     display: flex;
+     margin-top: 100px;
+     margin-bottom: 100px;
+@@ -173,31 +176,10 @@
+     text-transform: uppercase;
+ }
+ 
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-.statistic{
++.statistics{
+     background-color: #95e1d3;
+-
++    display: flex;
++    justify-content: space-around;
+ }
+ .stat{
+     justify-content: space-between;
+@@ -209,3 +191,69 @@
+     border-right: 1px solid #fff;
+     height: 100%;
+ }
++.stat:first-child {
++    border-left: 1px solid #fff; }
++
++.stat h2 {
++    font-size: 50px;
++    font-weight: 700;
++    color: #fff;
++}
++.stat h4 {
++    font-size: 12px;
++    font-weight: 400;
++    color: #fff;
++}
++.info{
++    width: 100%;
++    }
++.services_block{
++    max-width: 33.333333%;
++    display: flex;
++    justify-content: space-between;
++    margin-top: 55px;
++    margin-bottom: 52px;
++    border-bottom: 1px solid #eee;
++}
++
++.egypt{
++    display: flex;
++}
++.intro_team{
++    display: flex;
++    justify-content: space-between;
++}
++.partn_row{
++    display: flex;
++    justify-content: center;
++}
++.design{
++    display: block;
++    position: relative;
++    width: 100%;
++}
++.design:after{
++    content: "";
++    background: url(../img/Layer_45.png);
++    opacity: 0.4;
++    top: 0;
++    left: 0;
++    bottom: 0;
++    right: 0;
++    position: absolute;
++    z-index: -1;
++}
++.design_img_one {
++    padding-top: 5px;
++    margin: 0 auto;
++    justify-content: center;
++    width: 470px;
++}
++
++.design_img_two {
++    position: absolute;
++    bottom: -90px;
++    display: flex;
++    left: 59%;
++}
++
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- index.html	(revision 9f099d2bb6fe7a903002121f94b8d809af396a3a)
++++ index.html	(date 1536068324641)
+@@ -11,12 +11,11 @@
+  </head>
+ <body   class="body">
+ <header class="header">
+-    <div class="conteiner">
+-        <div class="row">
+-        <div>
+-        <h3 class="logo">MoGo</h3>
++     <div class="row"><!--Верхний ряд с меню-->
++            <div>
++             <h3 class="logo">MoGo</h3>
+         </div>
+-        <nav class="nav">
++            <nav class="nav">
+             <ul class="menu">
+                 <li>
+                     <a href="#">about</a>
+@@ -41,14 +40,14 @@
+                 </li>
+             </ul>
+             </nav>
+-        </div>
+-    <div class="title">
++        </div><!--Верхний ряд с меню-->
++     <div class="title"><!--титулка-->
+         <h2 class="title_creative">Creative Template</h2>
+         <h1 class="title_welcome">Welcome to MoGo</h1>
+         <div class="line_head"></div>
+         <a class="learn_morebotton" href="#">Learn more</a>
+-    </div>
+-        <div class="dowm_slider">
++     </div><!--титулка-->
++     <div class="dowm_slider"> <!--нижние кнопки-->
+             <div class="slider1">
+                 <a href="#">01 Intro</a>
+             </div>
+@@ -61,9 +60,8 @@
+             <div class="slider4">
+                 <a href="#">04 Contacts</a>
+             </div>
+-        </div>
+-    </div>
+-</header>
++     </div><!--нижние кнопки-->
++    </header>
+     <main>
+     <section class="story">
+         <div class="container">
+@@ -73,7 +71,7 @@
+                 <div class="title_line"></div>
+                 <p class="title_down">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+             </div>
+-            <div class="row_img">
++            <div class="row-img">
+                 <div class="img_one">
+                     <img src="img/Layer_44.png" class="img_story">
+                         <div class="background_row_img">
+@@ -102,25 +100,271 @@
+             </div>
+         </div>
+     </section>
+-    <section class="statistic">
+-        <div class="container">
+-            <div class="stat_info">
++    <section class="statistic"><!--cтатистика-->
++        <div class="statistics">
++            <div class="stat info">
+                 <h2>42</h2>
+                 <h4>Web Design Projects</h4>
+             </div>
+-            <div class="stat_info">
++            <div class="stat info">
+                 <h2>123</h2>
+                 <h4>happy client</h4>
+             </div>
+-            <div class="stat_info">
++            <div class="stat info">
+                 <h2>15</h2>
+                 <h4>award winner</h4>
+             </div>
+-            <div class="stat_info">
++            <div class="stat info">
++            <h2>99</h2>
++            <h4>cup of coffee</h4>
++        </div>
++            <div class="stat info">
+                 <h2>24</h2>
+                 <h4>members</h4>
+             </div>
+         </div>
++    </section><!--cтатистика-->
++    <section class="services"><!--мы работаем с -->
++        <div>
++            <h5 class="title_up">We work with</h5>
++            <h4 class="title_mid">Amazing Services</h4>
++            <div class="title_line"></div>
++        </div>
++        <div class="egypt">
++            <div class="service_row">
++                <img src="img/ALARM.png">
++                <div class="services_block">
++                    <h5>Photography</h5>
++                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
++                </div>
++            </div>
++            <div class="service_row">
++                <img src="img/LINE_GRAPH.png">
++                <div class="services_block">
++                    <h5>Web Design</h5>
++                    <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
++                </div>
++            </div>
++            <div class="service_row">
++                <img src="img/_OK.png">
++                <div class="services_block">
++                    <h5>Creativity</h5>
++                    <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
++                </div>
++            </div>
++        </div>
++        <div class="egypt">
++            <div class="service_row">
++                <img src="img/ALARM.png">
++                <div class="services_block">
++                    <h5>seo</h5>
++                    <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
++                </div>
++            </div>
++            <div class="service_row">
++                <img src="img/LINE_GRAPH.png">
++                <div class="services_block">
++                    <h5>Css/Html</h5>
++                    <p>Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</p>
++                </div>
++            </div>
++            <div class="service_row">
++                <img src="img/_OK.png">
++                <div class="services_block">
++                    <h5>digital</h5>
++                    <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
++                </div>
++            </div>
++        </div>
++    </section><!--мы работаем с -->
++    <section class="design">
++        <div class="title_d">
++            <h5 class="title_up">For all devices</h5>
++            <h4 class="title_mid">Unique design</h4>
++            <div class="title_line  "></div>
++        </div>
++        <div class="design_img_one">
++            <img src="./img/display_bg_768x1024.png" alt="display_bg_768x1024.png">
++        </div>
++        <div class="design_img_two">
++            <img src="./img/White.png" alt="White.png">
++        </div>
+     </section>
++    <section class="service">
++        <div>
++                <h5 class="title_up">Service</h5>
++                <h4 class="title_mid">What we do</h4>
++                <div class="title_line"></div>
++                <p class="title_down">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
++        </div>
++        <div>
++            <img src="./img/Layer_43.png" alt="Layer_43.png">
++        </div>
++
++        <button class="collapsible">Potography</button>
++            <p class="content">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
++            </p>
++        </>
++        <div>
++
++        </div>
++    </section>
++    <section class="team">
++        <div>
++            <h5 class="title_up">Who we are</h5>
++            <h4 class="title_mid">Meet our team</h4>
++            <div class="title_line"></div>
++            <p class="title_down">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
++        </div>
++        <div >
++            <div >
++                <img src="img/Layer_16.png" class="img__team">
++                <div class="intro_team">
++                    <h4>Matthew Dix</h4>
++                    <h5>Graphic Design</h5>
++                </div>
++            </div>
++            <div >
++                <img src="img/Layer_18.png" class="img__team">
++                <div class="intro_team">
++                    <h4>Christopher Campbell</h4>
++                    <h5>Branding/UX design</h5>
++                </div>
++            </div>
++            <div >
++                <img src="img/Layer_19.png" class="img__team">
++                <div class="intro_team">
++                    <h4>Michael Fertig </h4>
++                    <h5>Developer</h5>
++                </div>
++            </div>
++        </div>
++    </section>
++        <section class="partners">
++            <div>
++                <div class="partn_row">
++                    <div class="partn">
++                        <img src="img/partn1.png" alt="partn1.png">
++                    </div>
++                    <div class="partn">
++                        <img src="img/partn2.png" alt="partn2.png">
++                    </div>
++                    <div class="partn">
++                        <img src="img/partn3.png" alt="partn3.png">
++                    </div>
++                    <div class="partn">
++                        <img src="img/partn4.png" alt="partn4.png">
++                    </div>
++                    <div class="partn">
++                        <img src="img/partn5.png" alt="partn5.png">
++                    </div>
++                    <div class="partn">
++                        <img src="img/partn6.png" alt="partn6.png">
++                    </div>
++                </div>
++            </div>
++        </section>
++        <section class="work">
++            <div>
++                <div>
++                    <h5 class="title_up">What we do</h5>
++                    <h4 class="title_mid">some of our work</h4>
++                    <div class="title_line"></div>
++                    <p class="title_down">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
++                </div>
++            </div>
++        </section>
++        <section class="peoplesay">
++            <div>
++                <h5 class="title_up">Happy Clients</h5>
++                <h4 class="title_mid">what people say</h4>
++                <div class="title_line"></div>
++            </div>
++        </section>
++        <section class="blog">
++            <div>
++                <div>
++                    <h5 class="title_up">Our stories</h5>
++                    <h4 class="title_mid">latest blog</h4>
++                    <div class="title_line"></div>
++                </div>
++            </div>
++        </section>
++        <section class="map">
++            <div>
++                <div>
++
++                </div>
++            </div>
++        </section>
++    </main>
++    <footer>
++            <div>
++                <h2>MoGo</h2>
++                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
++
++                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
++            </div>
++            <div class="followers">
++                <h3>15K</h3>
++                <p>followers</p>
++            </div>
++            <div class="follow_us">
++                <p>Follow Us:
++                    <a href="#"></a>
++                    <a href="#"></a>
++                    <a href="#"></a>
++                    <a href="#"></a>
++                    <a href="#"></a>
++                    <a href="#"></a>
++                    <a href="#"></a>
++                    <a href="#"></a>
++                </p>
++            </div>
++            <form action="" method="post">
++                <input type="email" name="email" placeholder="Your Email..."> <input type="submit" value="SUBSCRIBE">
++            </form>
++            <div class="blogs">
++                <div>
++                    <h3>Blogs</h3>
++                </div>
++                <div>
++                    <img src="./img/photos-7884rHDsW8yqbsyN.png" alt="">
++                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing <br>
++                    <span>Jan 9, 2016</span>
++                    </p>
++                </div>
++                <div>
++                    <img src="./img/photos-7884lejLFH9MN8IC.png" alt="">
++                    <p>Consectetur adipiscing elit, sed do eiusmod tempor <br>
++                    <span>Jan 9, 2016</span>
++                    </p>
++                </div>
++                <div>
++                    <img src="./img/photos-7884P2smgicsZFyn.png" alt="">
++                    <p>sed do eiusmod tempor incididunt ut labore <br>
++                    <span>Jan 9, 2016</span>
++                    </p>
++                </div>
++            </div>
++            <div class="instagram">
++                <div>
++                    <h3>instagram</h3>
++                    <img src="img/photos-7884MJE3ABUJPTO1.png">
++                    <img src="img/photos-7884MBqau4DkSE9K.png">
++                    <img src="img/photos-7884M86ovdhbiWKi.png">
++                    <img src="img/photos-7884rRdzNWx35XGc.png">
++                    <img src="img/photos-7884W4HBOgfC6WDb.png">
++                    <img src="img/photos-7884qnJlwaL4TA8x.png">
++                    <img src="img/photos-78841zcS1oLCjBr4.png">
++                    <img src="img/photos-78842fGoMmtuD5Z9.png">
++                    <img src="img/photos-7884nwL7ruku3rhJ.png">
++                </div>
++                <a href="#">View more photos</a>
++            </div>
++            <div>
++             <p>© 2016 MoGo free PSD template by <a href="#">Laaqiq</a></p>
++            </div>
++        </footer>
+ </body>
+ </html>
+\ No newline at end of file

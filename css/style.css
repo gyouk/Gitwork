@@ -1,7 +1,12 @@
 @charset "UTF-8";
 .body {
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
     font-family: Montserrat, serif;
-    }
+    margin: 0px;
+       }
 .container {
     padding: 0;
 }
@@ -9,13 +14,15 @@
 .header {
     background-color: #fce38a;
     background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
-    display: block;
+    display: inline-block;
     position: relative;
     width: 100%;
+
     }
-.header::before {
+.header:before {
     content: "";
     background: url(../img/Layer_15.png) no-repeat center top/cover;
+
     opacity: 0.1;
     top: 0;
     left: 0;
@@ -26,10 +33,23 @@
     }
 
 /*задний фон*/
-li{
+.line_head {
     display: inline-block;
+    justify-content: space-between;
     margin: 0;
-    padding: 0;
+    padding:13px;
+    text-decoration-color:white ;
+    color: white;
+    font-size: 14px;
+    position: relative;
+}
+.row {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
 }
 .menu {
     justify-content: flex-end;
@@ -80,8 +100,10 @@ li{
     margin-bottom: 150px;
     padding-top: 10px;
     padding-bottom: 10px; }
-.dowm_slider{
-    display: inline-block;
+.dowm_slider {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
 }
 .title_up{
     padding-top: 90px;
@@ -180,7 +202,6 @@ h5 {
     font-size: 18px;
     text-transform: uppercase;
 }
-
 .statistics{
     background-color: #95e1d3;
     display: flex;
@@ -218,9 +239,6 @@ h5 {
     padding-top: 100px;
     padding-bottom: 100px;
 }
-
-
-
 .egypt{
     display: flex;
     justify-content: space-between;
